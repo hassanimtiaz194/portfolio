@@ -4,18 +4,21 @@ const NavigationHeader = () => {
   return (
     <header>
       <div>
-        <Link href="/portfolio">Hassan Imtiaz</Link>
+        <Link href="/">Hassan Imtiaz</Link>
       </div>
       <nav>
         <ul className="flex flex-row gap-5">
           <li>
+            <Link href="/">HOME</Link>
+          </li>
+          <li>
             <Link href="/about">ABOUT</Link>
           </li>
           <li>
-            <Link href="/portfolio/projects">PROJECTS</Link>
+            <Link href="/projects">PROJECTS</Link>
           </li>
           <li>
-            <Link href="/portfolio/contact">CONTACT</Link>
+            <Link href="/contact">CONTACT</Link>
           </li>
         </ul>
       </nav>
