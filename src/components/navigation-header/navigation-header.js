@@ -33,7 +33,7 @@ const NavigationHeader = () => {
         </div>
         <div className={classes.contactIcons}>
           <a
-            href="https://github.com/your-username/your-repository"
+            href="https://github.com/hassanimtiaz194"
             target="_blank"
           >
             <VscGithub color="#fff" size={25}/>
