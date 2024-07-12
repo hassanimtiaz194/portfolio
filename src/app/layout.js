@@ -1,3 +1,4 @@
+import classes from "../../styles/styles.module.css";
 import NavigationHeader from "@/components/navigation-header/navigation-header";
 
 export const metadata = {
@@ -8,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={classes.bodyContainer}>
         <NavigationHeader />
         {children}
       </body>

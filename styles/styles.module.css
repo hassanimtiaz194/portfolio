@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.bodyContainer {
+  margin: 0;
+  background-image: linear-gradient(99deg,#34353a,#5c5b5b)
+}
+
+.mainNavContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.logoContainer {
+  font-family: 'Anton';
+  display: flex;
+  gap: 10px;
+  padding: 10px 10px 6px 30px;
+  font-size: 25px;
+  font-weight: 500;
+  width: 200px;
+  color: #fff;
+}
+
+.logoSymbol {
+  font-size: 35px;
+  margin-top: -10px;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+  padding-top: 3px;
+  list-style: none;
+}
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Anton';
+}
+
+.navigation a:hover {
+  color: #fff;
+}
+
+.contactContainer {
+  display: flex;
+  gap: 15px;
+  padding-right: 40px;
+}
+
+.contactIcons {
+  padding-top: 18px;
+}
