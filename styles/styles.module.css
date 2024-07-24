@@ -31,18 +31,30 @@
 
 .navigation {
   display: flex;
-  gap: 20px;
-  padding-top: 3px;
-  list-style: none;
-}
-.navigation a {
+  padding: 3px 10px 2px 10px;
   text-decoration: none;
   color: #fff;
   font-family: 'Anton';
 }
+.navigation:hover {
+  color: #1A202C !important;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 5px;
+}
 
-.navigation a:hover {
-  color: #fff;
+.navigationB {
+  display: flex;
+  padding: 3px 10px 2px 10px;
+  text-decoration: none;
+  color: #1A202C !important;
+  font-family: 'Anton';
+}
+.navigationB:hover {
+  color: #fff !important;
+  text-decoration: none;
+  background-color: #1A202C !important;
+  border-radius: 5px;
 }
 
 .navigationActive {

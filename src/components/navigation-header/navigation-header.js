@@ -1,6 +1,7 @@
 "use client";
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { IoIosMail } from "react-icons/io";
 import { VscGithub } from "react-icons/vsc";
 import {
@@ -103,14 +104,24 @@ const DesktopNav = () => {
   const pathname = usePathname();
 
   return (
-    <Stack direction={"row"} spacing={4} paddingTop="8px">
+    <Stack direction={"row"} spacing={4} paddingTop="5px">
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Box
+              <Link
+                className={clsx(classes.navigation, {
+                  [classes.navigationActive]: navItem.href === pathname,
+                })}
+                href={navItem.href ?? "#"}
+              >
+                {navItem.label}
+              </Link>
+              {/* <Box
                 as="a"
-                className={clsx({ [classes.navigationActive]: navItem.href === pathname })}
+                className={clsx({
+                  [classes.navigationActive]: navItem.href === pathname,
+                })}
                 p={2}
                 href={navItem.href ?? "#"}
                 fontSize={"16px"}
@@ -125,7 +136,7 @@ const DesktopNav = () => {
                 }}
               >
                 {navItem.label}
-              </Box>
+              </Box> */}
             </PopoverTrigger>
           </Popover>
         </Box>
@@ -150,9 +161,15 @@ const MobileNav = () => {
 
 const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure();
-
+  const router = useRouter();
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack
+      spacing={4}
+      onClick={() => {
+        router.push(href);
+        onToggle();
+      }}
+    >
       <Box
         py={2}
         as="a"
@@ -172,34 +189,7 @@ const MobileNavItem = ({ label, children, href }) => {
         >
           {label}
         </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={"all .25s ease-in-out"}
-            transform={isOpen ? "rotate(180deg)" : ""}
-            w={6}
-            h={6}
-          />
-        )}
       </Box>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={"solid"}
-          borderColor={useColorModeValue("gray.200", "gray.700")}
-          align={"start"}
-        >
-          {children &&
-            children.map((child) => (
-              <Box as="a" key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Box>
-            ))}
-        </Stack>
-      </Collapse>
     </Stack>
   );
 };
