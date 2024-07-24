@@ -21,7 +21,8 @@
   font-weight: 500;
   width: 174px;
   color: #fff;
-  padding-top: 4px
+  padding-top: 4px;
+  cursor: pointer;
 }
 
 .logoSymbol {

@@ -1,4 +1,5 @@
 "use client";
+import React, { useState } from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -9,28 +10,22 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
-  Icon,
   Popover,
   PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
-  useDisclosure,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
   CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
 } from "@chakra-ui/icons";
 import classes from "../../../styles/styles.module.css";
 import { NAV_ITEMS } from "../../constants/constants";
 
 export default function NavigationHeader() {
-  const { isOpen, onToggle } = useDisclosure();
+  const [isOpen, SetIsOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <Box>
@@ -47,7 +42,7 @@ export default function NavigationHeader() {
           display={{ base: "flex", md: "none" }}
         >
           <IconButton
-            onClick={onToggle}
+            onClick={() => SetIsOpen(!isOpen)}
             icon={
               isOpen ? (
                 <CloseIcon color="white" w={3} h={3} />
@@ -60,7 +55,13 @@ export default function NavigationHeader() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <div className={classes.logoContainer}>
+          <div
+            className={classes.logoContainer}
+            onClick={() => {
+              console.log("hello");
+              router.push("/");
+            }}
+          >
             <div className={classes.logoSymbol}>{`< >`}</div>
             <div>|</div>
             <div>HASSAN IMTIAZ</div>
@@ -93,7 +94,7 @@ export default function NavigationHeader() {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav onClose={() => SetIsOpen(false)} />
       </Collapse>
     </Box>
   );
@@ -117,26 +118,6 @@ const DesktopNav = () => {
               >
                 {navItem.label}
               </Link>
-              {/* <Box
-                as="a"
-                className={clsx({
-                  [classes.navigationActive]: navItem.href === pathname,
-                })}
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"16px"}
-                fontWeight={500}
-                fontFamily="Anton"
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  backgroundColor: "white",
-                  borderRadius: 5,
-                  color: "gray.800",
-                }}
-              >
-                {navItem.label}
-              </Box> */}
             </PopoverTrigger>
           </Popover>
         </Box>
@@ -145,7 +126,7 @@ const DesktopNav = () => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({onClose}) => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
@@ -153,25 +134,25 @@ const MobileNav = () => {
       display={{ md: "none" }}
     >
       {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+        <MobileNavItem onClose={onClose} key={navItem.label} {...navItem} />
       ))}
     </Stack>
   );
 };
 
-const MobileNavItem = ({ label, children, href }) => {
-  const { isOpen, onToggle } = useDisclosure();
+const MobileNavItem = ({ label, children, href, onClose }) => {
   const router = useRouter();
   return (
     <Stack
       spacing={4}
       onClick={() => {
+        onClose();
         router.push(href);
-        onToggle();
       }}
     >
       <Box
         py={2}
+        as="div"
         justifyContent="space-between"
         alignItems="center"
         _hover={{
