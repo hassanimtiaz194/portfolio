@@ -172,8 +172,6 @@ const MobileNavItem = ({ label, children, href }) => {
     >
       <Box
         py={2}
-        as="a"
-        href={href ?? "#"}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
