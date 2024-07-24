@@ -1,3 +1,4 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import classes from "../../styles/styles.module.css";
 import NavigationHeader from "@/components/navigation-header/navigation-header";
 
@@ -10,8 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={classes.bodyContainer}>
-        <NavigationHeader />
-        {children}
+        <ChakraProvider>
+          <NavigationHeader />
+          {children}
+        </ChakraProvider>
       </body>
     </html>
   );
