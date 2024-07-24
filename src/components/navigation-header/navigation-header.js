@@ -146,8 +146,8 @@ const MobileNavItem = ({ label, children, href, onClose }) => {
     <Stack
       spacing={4}
       onClick={() => {
-        onClose();
         router.push(href);
+        onClose();
       }}
     >
       <Box
