@@ -17,7 +17,11 @@ export default function Home() {
       justifyContent="center"
     >
       <Box>
-        <Text color="white" fontSize={{ base: '18px', md: '26px', lg: '40px' }}>
+        <Text
+          fontFamily="Anton"
+          color="white"
+          fontSize={{ base: "18px", md: "26px", lg: "40px" }}
+        >
           <TypicalAnimation steps={Introduction} />
         </Text>
       </Box>
