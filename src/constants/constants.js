@@ -18,8 +18,8 @@ export const NAV_ITEMS = [
 ];
 
 export const Introduction = [
-  "Hello 👋",
-  2000,
+  "Hello 👋, I'm Hassan Imtiaz",
+  3500,
   "I am a Front-End developer 🖥️",
   3500,
   "I am a Back-End developer 🔧",
@@ -28,4 +28,4 @@ export const Introduction = [
   3500,
   "I am a Software Engineer 💻",
   3500,
-]
+];
