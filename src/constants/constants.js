@@ -16,3 +16,16 @@ export const NAV_ITEMS = [
     href: "/projects",
   },
 ];
+
+export const Introduction = [
+  "Hello 👋",
+  2000,
+  "I am a Front-End developer 🖥️",
+  3500,
+  "I am a Back-End developer 🔧",
+  3500,
+  "I am a Full-Stack developer (🖥️ + 🔧)",
+  3500,
+  "I am a Software Engineer 💻",
+  3500,
+]
