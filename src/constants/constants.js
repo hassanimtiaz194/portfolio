@@ -17,15 +17,18 @@ export const NAV_ITEMS = [
   },
 ];
 
-export const Introduction = [
+export const Introduction_Name = [
   "Hello 👋, I'm Hassan Imtiaz",
+  3500
+];
+
+export const Introduction = [
+  "Front-End Developer 🖥️",
   3500,
-  "I am a Front-End developer 🖥️",
+  "Back-End Developer 🔧",
   3500,
-  "I am a Back-End developer 🔧",
+  "Full-Stack Developer (🖥️ + 🔧)",
   3500,
-  "I am a Full-Stack developer (🖥️ + 🔧)",
-  3500,
-  "I am a Software Engineer 💻",
+  "Software Engineer 💻",
   3500,
 ];
