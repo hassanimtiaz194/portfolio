@@ -1,5 +1,8 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Grid } from "@chakra-ui/react";
 import Image from "next/image";
+import LanguagesCard from "../../components/language-card/language-card";
+import { SKILLS } from "../../constants/constants";
+
 export default function About() {
   const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
   return (
@@ -15,16 +18,18 @@ export default function About() {
         display="flex"
         alignItems="center"
         flexDirection="column"
-        width="60%"
+        width={{ base: "80%", md: "60%" }}
         gap="20px"
-        paddingTop="400px"
+        height="100%"
+        paddingTop="50px"
         paddingBottom="100px"
       >
         <Box
           border="solid 10px white"
           borderRadius="50%"
-          overflow="hidden"
+          overflow="visible"
           boxShadow="0px 4px 8px rgba(0, 0, 0, 0.2);"
+          // height="180px"
           min-height="180px"
         >
           <Image
@@ -32,15 +37,10 @@ export default function About() {
             width={250}
             height={100}
             src={`${basePath}/images/about.png`}
-            alt="Next.js Logo"
+            alt="Hassan Imtiaz"
           />
         </Box>
-        <Box
-        //display="flex"
-        //alignItems="center"
-        //flexDirection="column"
-        // width="50%"
-        >
+        <Box>
           <Text
             fontFamily="Anton"
             color="white"
@@ -58,6 +58,26 @@ export default function About() {
             various technology stacks.
           </Text>
         </Box>
+        <Box>
+          <Text
+            fontFamily="Anton"
+            color="white"
+            fontSize={{ base: "16px", md: "20px", lg: "20px" }}
+            textAlign={"justify"}
+          >
+            Skills
+          </Text>
+        </Box>
+        <Grid
+          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+          gap="25px"
+          justifyContent="center"
+          paddingBottom="40px"
+        >
+          {SKILLS.map((item) => (
+            <LanguagesCard key={item.id} item={item} />
+          ))}
+        </Grid>
       </Box>
     </Box>
   );
