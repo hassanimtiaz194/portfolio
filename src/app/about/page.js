@@ -18,7 +18,7 @@ export default function About() {
         display="flex"
         alignItems="center"
         flexDirection="column"
-        width={{ base: "80%", md: "60%" }}
+        width="80%"
         gap="20px"
         height="100%"
         paddingTop="50px"
@@ -69,7 +69,7 @@ export default function About() {
           </Text>
         </Box>
         <Grid
-          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(5, 1fr)" }}
           gap="25px"
           justifyContent="center"
           paddingBottom="40px"
