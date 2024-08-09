@@ -12,7 +12,7 @@ export default function Resume() {
       justifyContent="center"
       overflowY="auto"
     >
-      <Box width="60%" paddingTop="150px" paddingBottom="50px">
+      <Box width={{ base: "90%", md: "80%", lg: "60%" }} paddingTop="150px" paddingBottom="50px">
         <ViewPdf URL={`${basePath}/resume/Hassan_Imtiaz_Resume.pdf`} />
       </Box>
     </Box>
