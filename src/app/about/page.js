@@ -30,6 +30,7 @@ export default function About() {
           overflow="visible"
           boxShadow="0px 4px 8px rgba(0, 0, 0, 0.2);"
           // height="180px"
+          backgroundColor="white"
           min-height="180px"
         >
           <Image
