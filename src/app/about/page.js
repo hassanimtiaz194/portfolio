@@ -15,7 +15,7 @@ export default function About() {
         display="flex"
         alignItems="center"
         flexDirection="column"
-        width="80%"
+        width="60%"
         gap="20px"
         paddingTop="400px"
         paddingBottom="100px"
@@ -47,15 +47,15 @@ export default function About() {
             fontSize={{ base: "16px", md: "20px", lg: "20px" }}
             textAlign={"justify"}
           >
-            Certainly! Here's a polished professional summary: I am a seasoned
-            Full-Stack Developer with five years of experience, having worked
-            with three prominent IT firms in Pakistan. My expertise includes
-            developing ERP systems, competition management platforms, and
-            healthcare applications. I hold a Postgraduate degree in Software
-            Engineering from FAST National University (2020) and completed my
-            undergraduate studies in Software Engineering at Foundation
-            University (2018). My career reflects a strong ability to deliver
-            high-impact solutions across various technology stacks.
+            Hi, my name is Hassan Imtiaz.I am a seasoned Full-Stack Developer
+            with five years of experience, having worked with three prominent IT
+            firms in Pakistan. My expertise includes developing ERP systems,
+            competition management platforms, and healthcare applications. I
+            hold a Postgraduate degree in Software Engineering from FAST
+            National University (2020) and completed my undergraduate studies in
+            Software Engineering at Foundation University (2018). My career
+            reflects a strong ability to deliver high-impact solutions across
+            various technology stacks.
           </Text>
         </Box>
       </Box>
