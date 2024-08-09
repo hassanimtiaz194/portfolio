@@ -36,7 +36,7 @@ export default function Home() {
           <Image
             // className={styles.logo}
             width={600}
-            height={100}
+            height={600}
             src={`${basePath}/images/home_profile.png`}
             alt="Next.js Logo"
           />
