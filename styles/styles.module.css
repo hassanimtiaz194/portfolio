@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 .bodyContainer {
   margin: 0;
   height: calc(100vh);
-  background-image: linear-gradient(99deg, #34353a, #5c5b5b);
+  background-g: linear-gradient(99deg, #34353a, #5c5b5b);
   background-size: cover;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .logoContainer {
-  font-family: 'Anton';
+  font-family: "Anton";
   display: flex;
   gap: 10px;
   font-size: 22px;
@@ -35,10 +35,10 @@
   padding: 3px 10px 2px 10px;
   text-decoration: none;
   color: #fff;
-  font-family: 'Anton';
+  font-family: "Anton";
 }
 .navigation:hover {
-  color: #1A202C !important;
+  color: #1a202c !important;
   text-decoration: none;
   background-color: white;
   border-radius: 5px;
@@ -48,18 +48,18 @@
   display: flex;
   padding: 3px 10px 2px 10px;
   text-decoration: none;
-  color: #1A202C !important;
-  font-family: 'Anton';
+  color: #1a202c !important;
+  font-family: "Anton";
 }
 .navigationB:hover {
   color: #fff !important;
   text-decoration: none;
-  background-color: #1A202C !important;
+  background-color: #1a202c !important;
   border-radius: 5px;
 }
 
 .navigationActive {
-  color: #1A202C !important;
+  color: #1a202c !important;
   text-decoration: none;
   background-color: white;
   border-radius: 5px;
