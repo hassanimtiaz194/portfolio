@@ -1,3 +1,4 @@
+import LottieLoader from "@/components/lottie-loader/lottie-loader";
 import { Box, Text } from "@chakra-ui/react";
 export default function Projects() {
   return (
@@ -9,6 +10,7 @@ export default function Projects() {
       height="calc(100vh - 60px)"
       justifyContent="center"
     >
+      <LottieLoader />
       <Box display="flex" alignItems="center" flexDirection="column">
         <Text
           fontFamily="Anton"

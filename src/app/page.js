@@ -2,6 +2,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import TypicalAnimation from "../components/typical-animation/typical-animation";
+import LottieLoader from "../components/lottie-loader/lottie-loader";
 import { Introduction, Introduction_Name } from "../constants/constants";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       height="calc(100vh - 60px)"
       justifyContent="center"
     >
+      <LottieLoader />
       <Box>
         <Box display="flex" alignItems="center" flexDirection="column">
           <Text

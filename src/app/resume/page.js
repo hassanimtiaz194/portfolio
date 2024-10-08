@@ -1,5 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import ViewPdf from "../../components/view-pdf/view-pdf";
+import LottieLoader from "@/components/lottie-loader/lottie-loader";
 
 export default function Resume() {
   const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
@@ -12,6 +13,7 @@ export default function Resume() {
       justifyContent="center"
       overflowY="auto"
     >
+      <LottieLoader />
       <Box width={{ base: "90%", md: "80%", lg: "60%" }} paddingTop="150px" paddingBottom="50px">
         <ViewPdf URL={`${basePath}/resume/Hassan_Imtiaz_Resume.pdf`} />
       </Box>

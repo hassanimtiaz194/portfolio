@@ -21,7 +21,7 @@ export default function LanguagesCard({item}) {
           // className={styles.logo}
           width={600}
           height={100}
-          src={`${basePath}/languages${item.url}`}
+          src={`${basePath}/languages${item?.url}`}
           alt={`${"react"} Logo`}
         />
       </Box>
@@ -31,7 +31,7 @@ export default function LanguagesCard({item}) {
           color="Black"
           fontSize={{ base: "16px", md: "18px", lg: "18px" }}
         >
-          {item.skill}
+          {item?.skill}
         </Text>
       </Box>
     </Box>

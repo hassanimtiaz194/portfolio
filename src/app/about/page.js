@@ -2,6 +2,7 @@ import { Box, Text, Grid } from "@chakra-ui/react";
 import Image from "next/image";
 import LanguagesCard from "../../components/language-card/language-card";
 import { SKILLS } from "../../constants/constants";
+import LottieLoader from "@/components/lottie-loader/lottie-loader";
 
 export default function About() {
   const basePath = process.env.NODE_ENV === "production" ? "/portfolio" : "";
@@ -14,6 +15,7 @@ export default function About() {
       justifyContent="center"
       overflowY="auto"
     >
+      <LottieLoader />
       <Box
         display="flex"
         alignItems="center"
